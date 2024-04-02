@@ -8,7 +8,7 @@
  * Text Domain: webcraftic-updates-manager
  * Domain Path: /languages/
  * Author URI: https://webcraftic.com
- * Framework Version: FACTORY_473_VERSION
+ * Framework Version: FACTORY_474_VERSION
  */
 
 // Exit if accessed directly
@@ -68,15 +68,15 @@ $wupm_plugin_info = [
 
 	// FRAMEWORK MODULES
 	'load_factory_modules' => [
-		['libs/factory/bootstrap', 'factory_bootstrap_475', 'admin'],
-		['libs/factory/forms', 'factory_forms_469', 'admin'],
-		['libs/factory/pages', 'factory_pages_473', 'admin'],
-		['libs/factory/templates', 'factory_templates_126', 'all'],
-		['libs/factory/adverts', 'factory_adverts_151', 'admin']
+		['libs/factory/bootstrap', 'factory_bootstrap_476', 'admin'],
+		['libs/factory/forms', 'factory_forms_474', 'admin'],
+		['libs/factory/pages', 'factory_pages_474', 'admin'],
+		['libs/factory/templates', 'factory_templates_127', 'all'],
+		['libs/factory/adverts', 'factory_adverts_152', 'admin']
 	]
 ];
 
-$wupm_compatibility = new Wbcr_Factory473_Requirements(__FILE__, array_merge($wupm_plugin_info, [
+$wupm_compatibility = new Wbcr_Factory474_Requirements(__FILE__, array_merge($wupm_plugin_info, [
 	'plugin_already_activate' => defined('WUPM_PLUGIN_ACTIVE'),
 	'required_php_version' => '5.4',
 	'required_wp_version' => '4.2.0',
