@@ -4,11 +4,11 @@
  * Plugin URI: https://wordpress.org/plugins/gonzales/
  * Description: Increase the speed of the pages by disabling unused scripts (.JS) and styles (.CSS). Make your website REACTIVE!
  * Author: Webcraftic <wordpress.webraftic@gmail.com>
- * Version: 2.1.7
+ * Version: 2.1.9
  * Text Domain: gonzales
  * Domain Path: /languages/
  * Author URI: https://webcraftic.com
- * Framework Version: FACTORY_474_VERSION
+ * Framework Version: FACTORY_480_VERSION
  */
 
 // Exit if accessed directly
@@ -68,15 +68,15 @@ $wgnz_plugin_info = [
 
 	// FRAMEWORK MODULES
 	'load_factory_modules' => [
-		['libs/factory/bootstrap', 'factory_bootstrap_476', 'admin'],
-		['libs/factory/forms', 'factory_forms_474', 'admin'],
-		['libs/factory/pages', 'factory_pages_474', 'admin'],
-		['libs/factory/templates', 'factory_templates_127', 'all'],
-		['libs/factory/adverts', 'factory_adverts_152', 'admin']
+		['libs/factory/bootstrap', 'factory_bootstrap_482', 'admin'],
+		['libs/factory/forms', 'factory_forms_480', 'admin'],
+		['libs/factory/pages', 'factory_pages_480', 'admin'],
+		['libs/factory/templates', 'factory_templates_134', 'all'],
+		['libs/factory/adverts', 'factory_adverts_159', 'admin']
 	]
 ];
 
-$wgnz_compatibility = new Wbcr_Factory474_Requirements(__FILE__, array_merge($wgnz_plugin_info, [
+$wgnz_compatibility = new Wbcr_Factory480_Requirements(__FILE__, array_merge($wgnz_plugin_info, [
 	'plugin_already_activate' => defined('WGZ_PLUGIN_ACTIVE'),
 	'required_php_version' => '7.0',
 	'required_wp_version' => '4.2.0',

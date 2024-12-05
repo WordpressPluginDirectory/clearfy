@@ -2,9 +2,9 @@
 Tags: dequeue script, dequeue style, pagespeed, speed, unload style, gonzales, assets clean, assets, assets cleanup, page speed optimizer, perfmatters, disable script, disable style, disable jquery, disable jquery-migrate, disable fonts
 Contributors: webcraftic, creativemotion, alexkovalevv
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VDX7JNTQPNPFW
-Requires at least: 5.2
-Tested up to: 6.4
-Requires PHP: 7.0
+Requires at least: 5.6
+Tested up to: 6.7
+Requires PHP: 7.2
 Stable tag: trunk
 License: GPLv2
 
@@ -59,6 +59,13 @@ We invite you to check out a few other related free plugins that our team has al
 2. Assets manager
 
 == Changelog ==
+= 2.1.9 (05.12.2024) =
+* Added: Compatibility with Wordpress 6.7
+
+= 2.1.8 (21.03.2024) =
+* Added: Compatibility with Wordpress 6.5
+* Added: Compatibility with php 8.3
+
 = 2.1.7 (21.11.2023) =
 * Added: Compatibility with Wordpress 6.4
 * Added: Compatibility with php 8.2

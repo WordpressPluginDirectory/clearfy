@@ -19,7 +19,7 @@ class WCL_ClearfySettingsPage extends WCL_Page {
 	 * Mainly used to navigate between pages.
 	 *
 	 * @since 1.0.0
-	 * @see   FactoryPages474_AdminPage
+	 * @see   FactoryPages480_AdminPage
 	 *
 	 * @var string
 	 */
@@ -144,7 +144,7 @@ class WCL_ClearfySettingsPage extends WCL_Page {
 				<li>
 					<p><?php _e('Generate a debug report which will contains inforamtion about your configuratin and installed plugins', 'clearfy') ?></p>
 					<p>
-						<a href="<?= $this->getActionUrl('gererate_report'); ?>" class="button"><?php _e('Generate Debug Report', 'clearfy') ?></a>
+						<a href="<?php echo wp_nonce_url($this->getActionUrl('gererate_report'), 'gererate_report'); ?>" class="button"><?php _e('Generate Debug Report', 'clearfy') ?></a>
 					</p>
 				</li>
 				<li>
@@ -202,6 +202,11 @@ class WCL_ClearfySettingsPage extends WCL_Page {
 	 */
 	public function gererateReportAction()
 	{
+		if( !(isset( $_GET[ '_wpnonce' ] ) && wp_verify_nonce( $_GET[ '_wpnonce' ], 'gererate_report' ))
+            || !WCL_Plugin::app()->currentUserCan() ) {
+            wp_die(__('You do not have sufficient permissions to perform this action!', 'clearfy'));
+		}
+
 		require_once(WCL_PLUGIN_DIR . '/includes/classes/class.zip-archive.php');
 
 		$reposts_dir = WCL_PLUGIN_DIR . '/reports';
