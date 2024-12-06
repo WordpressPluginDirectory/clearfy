@@ -108,9 +108,10 @@ class WCL_Plugin extends Wbcr_Factory480_Plugin {
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 */
 	public function plugins_loaded() {
-		//if( is_admin() ) {
-		//$this->register_pages();
-		//}
+
+		if ( is_admin() ) {
+			require_once( WCL_PLUGIN_DIR . '/admin/pages/class-page.php' );
+		}
 
 		require_once( WCL_PLUGIN_DIR . '/includes/classes/class.configurate-advanced.php' );
 		new WCL_ConfigAdvanced( $this );
@@ -142,12 +143,12 @@ class WCL_Plugin extends Wbcr_Factory480_Plugin {
 
 		// Выполнить код до загрузки и инициализации компонентов
 		// ----------------------------------------------------------
-		//if( $this->premium->is_install_package() ) {
-		//$package = $this->premium->get_package_data();
-		//if( version_compare($package['version'], "1.4.3", "<") ) {
-		//unset($load_components['cache']);
-		//}
-		//}
+		/*if ( $this->premium->is_install_package() ) {
+			$package = $this->premium->get_package_data();
+			if ( version_compare( $package['version'], "1.4.3", "<" ) ) {
+				unset( $load_components['cache'] );
+			}
+		}*/
 
 		// Всегда отключем комонент кеша, для совместимости с премиум плагином.
 		// С версии Clearfy 2.1.0 мы сделали кеширующий компонент бесплатным и
@@ -195,8 +196,6 @@ class WCL_Plugin extends Wbcr_Factory480_Plugin {
 	 * @author Alexander Kovalev <alex.kovalevv@gmail.com>
 	 */
 	private function register_pages() {
-		require_once( WCL_PLUGIN_DIR . '/admin/pages/class-page.php' );
-
 		try {
 			$this->registerPage( 'WCL_Setup', WCL_PLUGIN_DIR . '/admin/pages/setup/class-pages-setup.php' );
 			$this->registerPage( 'WCL_QuickStartPage', WCL_PLUGIN_DIR . '/admin/pages/class-pages-quick-start.php' );
