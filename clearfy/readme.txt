@@ -5,7 +5,7 @@ Tags: cache, minify, optimize, performance, pagespeed, minify css, minify js, re
 Requires at least: 5.2
 Tested up to: 6.7
 Requires PHP: 7.2
-Stable tag: 2.2.9
+Stable tag: 2.3.0
 License: GPLv2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -253,8 +253,13 @@ Of course! To do this, email us your wishes with address, which you will find in
 5. Assets manager
 
 == Changelog ==
+= 2.3.0 (05.12.2024) =
+* Fixed: Minor bugs
+
 = 2.2.9 (05.12.2024) =
 * Fixed: Compatibility with premium plugin
+
+= 2.2.7 (05.12.2024) =
 * Added: Compatibility with Wordpress 6.7
 
 = 2.2.5 (29.09.2024) =

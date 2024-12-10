@@ -6,8 +6,12 @@
  */
 
 // Exit if accessed directly
-if( !defined('ABSPATH') ) {
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
+}
+
+if ( ! class_exists( 'WBCR\Factory_Templates_134\Pages\PageBase' ) ) {
+	return;
 }
 
 class WCL_CacheProNginxRulesPage extends WBCR\Factory_Templates_134\Pages\PageBase {
