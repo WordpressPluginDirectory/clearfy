@@ -21,7 +21,7 @@ if( !defined('ABSPATH') ) {
  * Уведомление будет показано на всех страницах Clearfy и его компонентах.
  *
  * @param WCL_Plugin $plugin
- * @param Wbcr_FactoryPages480_ImpressiveThemplate $obj
+ * @param \WBCR\Factory_Templates_134\Impressive $obj
  */
 
 add_action('wbcr/factory/pages/impressive/print_all_notices', function ($plugin, $obj) {
@@ -85,7 +85,7 @@ add_action('wbcr/factory/pages/impressive/header', function ($plugin_name) {
 /**
  * @param                                          $form
  * @param Wbcr_Factory480_Plugin $plugin
- * @param Wbcr_FactoryPages480_ImpressiveThemplate $obj
+ * @param \WBCR\Factory_Templates_134\Impressive $obj
  */
 function wbcr_clearfy_multisite_before_save($form, $plugin, $obj)
 {
@@ -151,7 +151,7 @@ add_filter('flush_rewrite_rules_hard', 'wbcr_clearfy_flush_rewrite_rules');
  * Обновить постоынные ссылки, после выполнения быстрых настроек
  *
  * @param WHM_Plugin $plugin
- * @param Wbcr_FactoryPages480_ImpressiveThemplate $obj
+ * @param \WBCR\Factory_Templates_134\Impressive $obj
  */
 function wbcr_clearfy_after_form_save($plugin, $obj)
 {
